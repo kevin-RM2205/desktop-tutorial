@@ -1,8 +1,9 @@
 # 1 Estructura y Organización de Datos
 _Repositorio_ de la materia de Estructura y Organización de Datos
 
-> [!NOTE]
+> [!IMPORTANT]
 > Semestre 2026B
+
 
 <img src="https://raw.githubusercontent.com/rivalcoba/dwssr-2026a/refs/heads/dev/.github/assets/pleca_itgam.jpg" alt="Texto alternativo" width="600">
 
