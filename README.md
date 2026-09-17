@@ -9,8 +9,8 @@ _Repositorio_ de la materia de Estructura y Organización de Datos Semestre 2026
 
 Identifica, selecciona y aplica eficientemente tipos de datos abstractos, métodos de ordenamiento y búsqueda para la optimización del rendimiento de soluciones de problemas del mundo real.
 
-< [!TIP]
-< ## Contenido
+> [!TIP]
+> ## Contenido
 *Unidad 1:* Fundamentos de estructura de datos
 
 *Unidad 2:* Estructuras lineales
