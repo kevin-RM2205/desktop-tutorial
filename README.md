@@ -1,5 +1,15 @@
-# Welcome to GitHub Desktop!
+# 1 Estructura y Organización de Datos
+_Repositorio_ de la materia de Estructura y Organización de Datos, Semestre 2026B
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
+## Competencias a desarrollar
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+Identifica, selecciona y aplica eficientemente tipos de datos abstractos, métodos de ordenamiento y búsqueda para la optimización del rendimiento de soluciones de problemas del mundo real.
+
+## Contenido
+*Unidad 1:* Fundamentos de estructura de datos
+
+*Unidad 2:* Estructuras lineales
+
+*Unidad 3:* Estructuras no lineales
+
+*Unidad 4:* Métodos de ordenamiento y búsqueda
