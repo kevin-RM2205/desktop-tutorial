@@ -28,3 +28,20 @@ timestamp_02 =  time.time()
 
 #Tomando el timepo del tiempo de ejecuicion
 print(f"Timepo de ejecicion: {(timestamp_02 - timestamp_01) * 1e6:.2f}  µs")
+
+#importar la biblioteca de tiempo
+
+import time
+#crea las variables para
+#el problema
+n = 100
+the_sum = 0
+
+#tomando el t1
+timestamp_01 = time.time()
+#iniciando ciclo while
+while(n > 0):
+    the_sum = the_sum + n #100 + 99 + 98 + .. + 1
+    m = n - 1
+    timestamo_02 = time.time()
+    
