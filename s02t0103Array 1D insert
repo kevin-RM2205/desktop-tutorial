@@ -1,0 +1,16 @@
+# importando funcion array
+from array import array as arr
+# importando una funcion de otro archivo
+from s02t0101 import print_array
+
+my_array = arr('i',[2,10,15,20])  
+
+print("--- ANTES DE LA INSERCION ---")
+print_array(my_array)
+
+# insercion
+my_array.insert(1,90)
+my_array.append
+print("--- SIMULAR UN APPEND CON INSERT ---")
+my_array.insert(len(my_array),90000)
+print_array(my_array)
