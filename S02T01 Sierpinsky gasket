@@ -1,0 +1,76 @@
+from array import array as arr
+from enum import Enum
+
+# Borra pantalla con caracteres ANSI
+def clear_screen():
+    print("\033[2J\033[H", end="")
+
+# Encapsulado de los valores ANSI para colores en un enumerado
+class AnsiColor(Enum):
+    RED = "\033[91m"
+    YELLOW = "\033[93m"
+    CYAN = "\033[96m"
+    RESET = "\033[0m"
+
+# Función para imprimir la matriz de manera cruda
+def print_matrix(input_matrix):
+    for row in input_matrix:
+        print(list(row))
+
+# Función para generar la matriz del triángulo de Sierpinski
+def generate_triangle(rows=1):
+    # Parámetros de la cuadrícula
+    columns = 2 * rows - 1
+    matrix = []
+
+    # Construyendo la cuadrícula base con ceros
+    for _ in range(rows):
+        new_row = arr('i', [0] * columns)
+        matrix.append(new_row)
+
+    # Calculando el centro de la primera fila y estableciendo en 1
+    center = columns // 2
+    matrix[0][center] = 1
+
+    # Calculando el resto de la matriz según la lógica del triángulo de Sierpinski
+    for row in range(1, rows):
+        for col in range(0, columns):
+            left_upper_cell = 0
+            right_upper_cell = 0
+
+            if col > 0:
+                left_upper_cell = matrix[row - 1][col - 1]
+            if col < columns - 1:
+                right_upper_cell = matrix[row - 1][col + 1]
+
+            # Asignación según la regla de la celda superior izquierda y derecha
+            if left_upper_cell != right_upper_cell:
+                matrix[row][col] = 1
+            else:
+                matrix[row][col] = 0
+
+    return matrix
+
+# Función para dibujar el triángulo visualmente en la consola
+def draw_matrix(input_matrix, symbol="*"):
+    for row in input_matrix:
+        for cell in row:
+            if cell == 1:
+                print(AnsiColor.CYAN.value + symbol + AnsiColor.RESET.value, end="")
+            else:
+                print(AnsiColor.RED.value + " ", end="")
+        print()
+
+# Método principal
+def main():
+    # Genera el triángulo de Sierpinski (puedes cambiar 5 por 15 o más filas)
+    matrix = generate_triangle(15)
+    
+    # Limpia la pantalla antes de dibujar
+    clear_screen()
+    
+    # Dibuja la matriz en pantalla con el símbolo personalizado
+    draw_matrix(matrix, symbol="■")
+
+if __name__ == "__main__":
+    main()
